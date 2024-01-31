@@ -15,6 +15,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.dogfitness.databinding.ActivityMainBinding;
+import com.google.firebase.Firebase;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         joinMailingList = findViewById(R.id.button_third);
         editTextEmail = findViewById(R.id.email);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,9 +60,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = String.valueOf(editTextEmail.getText());
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("email");
-                myRef.setValue(email);
+                if (isValidEmailAddress(email)) {
+                    DatabaseReference myRef = database.getReference(String.valueOf((int) (Math.random() * 10000000)));
+                    myRef.setValue(email);
+                }
+            }
+
+            private boolean isValidEmailAddress(String email) {
+                String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
+                java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
+                java.util.regex.Matcher m = p.matcher(email);
+                return m.matches();
             }
         });
 
