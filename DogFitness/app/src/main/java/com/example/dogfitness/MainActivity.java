@@ -18,11 +18,15 @@ import com.example.dogfitness.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
+    private Button joinMailingList;
+    private TextView editTextEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +40,23 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        View editTextEmail = findViewById(R.id.email);
 
+        joinMailingList = findViewById(R.id.button_third);
+        editTextEmail = findViewById(R.id.email);
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Remove this email button", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "do you really need to give your email for dog fitness?", Snackbar.LENGTH_LONG)
                         .setAnchorView(R.id.fab)
                         .setAction("Action", null).show();
+            }
+        });
+
+        joinMailingList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = String.valueOf(editTextEmail.getText());
+
             }
         });
 

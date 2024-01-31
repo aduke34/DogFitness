@@ -28,33 +28,12 @@
             android:layout_marginTop="16dp"
             android:text="If you're committed to ensuring your dog's health and well-being, consider joining our mailing list for a wealth of valuable resources and insights on canine fitness. By subscribing, you'll gain access to a diverse range of exercise routines tailored to suit various breeds, ages, and fitness levels. Whether you're looking for tips on maintaining an ideal weight, preventing common health issues, or simply seeking inspiration for fun and engaging activities to enjoy with your furry companion, our mailing list has you covered.
 \n\nFurthermore, our mailing list offers regular updates and pointers from experienced veterinarians, trainers, and pet care specialists. Stay informed about the latest trends and advancements in dog fitness, nutrition, and overall wellness. With our expert guidance and personalized recommendations, you can embark on a fulfilling journey towards fostering a strong bond with your dog while promoting their longevity and vitality. Join our mailing list today and embark on the path to a healthier, happier life for you and your beloved canine companion."
-            app:layout_constraintBottom_toTopOf="@id/button_third"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/button_second" />
 
-        <Button
-            android:id="@+id/button_third"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Join Mailing List"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textview_second"
-            app:layout_constraintBottom_toTopOf="@id/email"/>
 
-        <EditText
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            tools:layout_editor_absoluteX="104dp"
-            tools:layout_editor_absoluteY="456dp"
-            app:layout_constraintTop_toBottomOf="@id/button_third"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
