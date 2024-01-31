@@ -46,15 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         joinMailingList = findViewById(R.id.button_third);
         editTextEmail = findViewById(R.id.email);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        binding.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "do you really need to give your email for dog fitness?", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
-            }
-        });
+
 
         joinMailingList.setOnClickListener(new View.OnClickListener() {
             @Override
