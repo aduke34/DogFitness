@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         joinMailingList = findViewById(R.id.button_third);
         editTextEmail = findViewById(R.id.email);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
 
         joinMailingList.setOnClickListener(new View.OnClickListener() {
