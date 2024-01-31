@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            app:layout_constraintBottom_toTopOf="@id/textview_first"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Keeping your furry friend fit and healthy is vital for their overall well-being and longevity. Just like humans, dogs require regular exercise to maintain a healthy weight, strengthen muscles, and stimulate their minds. Establishing a consistent exercise routine tailored to your dog's breed, age, and health status is crucial. For instance, high-energy breeds like Border Collies or Huskies may need more vigorous exercise compared to smaller breeds like Pugs or Bulldogs.
+\n\nAim for a mix of aerobic exercise and strength training to keep your dog in top shape. Activities like brisk walks, jogging, or hiking are excellent for cardiovascular health and burning off excess energy. Additionally, engaging in games like fetch, agility training, or swimming can help build muscle strength and improve coordination. Be mindful of your dog's limitations and gradually increase the intensity and duration of exercise sessions to prevent injury.
+\n\nConsistency is key when it comes to regulating your dog's exercise. Aim for daily sessions of physical activity, ideally spread throughout the day to prevent boredom and excessive pent-up energy. Pay attention to signs of fatigue, overheating, or discomfort during exercise, and adjust accordingly. Remember that older dogs or those with certain health conditions may require modified exercise routines, so always consult with your veterinarian for personalized recommendations.
+\n\nFinally, don't overlook the importance of rest and recovery in your dog's fitness routine. Allow for adequate downtime between exercise sessions for your dog to recuperate and recharge. Providing a comfortable and cozy resting area where they can relax undisturbed is essential. By prioritizing a balanced approach to exercise, you can help your canine companion lead a happier, healthier, and more fulfilling life."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_first" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
