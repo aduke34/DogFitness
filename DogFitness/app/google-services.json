@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "233061983506",
+    "project_id": "dogfitness-40357",
+    "storage_bucket": "dogfitness-40357.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233061983506:android:8e519b661f1027e5dc7fcb",
+        "android_client_info": {
+          "package_name": "com.example.dogfitness"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_fW7VZtCVGdCSy2PqPk8gaXuID9aNpcc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
