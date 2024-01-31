@@ -15,6 +15,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.example.dogfitness.databinding.ActivityMainBinding;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -56,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = String.valueOf(editTextEmail.getText());
-
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("email");
+                myRef.setValue(email);
             }
         });
 
